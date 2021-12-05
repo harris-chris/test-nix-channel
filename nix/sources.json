@@ -1,4 +1,16 @@
 {
+    "jq": {
+        "branch": "master",
+        "description": "Command-line JSON processor",
+        "homepage": "http://stedolan.github.io/jq/",
+        "owner": "stedolan",
+        "repo": "jq",
+        "rev": "a9f97e9e61a910a374a5d768244e8ad63f407d3e",
+        "sha256": "153s802sxpys7slndm9dw1wv9pdq0pqym2s829ngfnl89lrzvmrc",
+        "type": "tarball",
+        "url": "https://github.com/stedolan/jq/archive/a9f97e9e61a910a374a5d768244e8ad63f407d3e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
