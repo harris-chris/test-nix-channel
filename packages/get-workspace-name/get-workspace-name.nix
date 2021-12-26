@@ -1,4 +1,4 @@
-{ stdenv, bash, gcc, coreutils }:
+{ stdenv, bash, gcc, coreutils, wmctrl }:
 
 stdenv.mkDerivation {
   name = "getworkspacename";
@@ -6,5 +6,5 @@ stdenv.mkDerivation {
   builder = "${bash}/bin/bash";
   args = [ ./builder.sh ];
   inherit gcc coreutils;
-  system = builtins.currentSystem;
+  system = "x86_64-linux";
 }
