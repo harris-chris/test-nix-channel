@@ -1,4 +1,5 @@
 let
+  pkgs = import <nixpkgs> {};
   pinnedNixpkgs = import ./pinned-nixpkgs.nix;
 
   hello = pkgs.writeShellScriptBin "hello" ''
@@ -15,7 +16,9 @@ let
     })
   ];
 
-  pkgs = pinnedNixpkgs {
+  channelPackages = {
+    inherit hello;
     inherit overlays;
+    getworkspacename = pkgs.callPackage ./packages/get-workspace-name/get-workspace-name.nix {};
   };
-in pkgs
+in channelPackages
